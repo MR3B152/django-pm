@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-g*ll+d4r_)*n1%4dxz1d3#*p!g-x7u%-(63r*wz!(m31f_%3(%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "django-pm-production.up.railway.app", "127.0.0.1"
+]
 
 
 # Application definition
@@ -53,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'projects_management.urls'
