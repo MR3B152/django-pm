@@ -4,14 +4,17 @@
 
 {% block content %}
 
-    <div class="d-flex">
+    <div class="b-flex">
         <h3 class="me-auto">{% trans "My Projects" %}</h3>
+    </div>
+    <div dir="rtl">
         <div>
             <a href="{% url 'Project_create' %}" class="btn btn-outline-success">
                 <i class="bi bi-plus-lg"></i> {% trans "New Project" %}
             </a>
         </div>
     </div>
+
 
     <div class="row my-5">
         {% for project in object_list %}
